@@ -26,7 +26,10 @@
     <meta property="og:type" content="product">
     <meta property="og:title" content="Wellnee Pain Relief Patches | Official Store - 70% OFF Today">
     <meta property="og:description" content="Move again without fear. Get 70% OFF on Wellnee Pain Relief Patches. Natural, non-invasive solution for knee pain.">
-    <meta property="og:image" content="https://placehold.co/600x600/0084FD/FFFFFF?text=Wellnee+Patches+Pack">
+    <!-- Updated OG Image to use domain + local path -->
+    <meta property="og:image" content="https://painpatch-relief.vercel.app/images/wellnee-pain-relief-patches.webp">
+
+    <link rel="icon" type="image/webp" href="images/wellnee-favicon.webp">
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -36,7 +39,7 @@
         {
           "@type": "Product",
           "name": "Wellnee Pain Relief Patches",
-          "image": "https://placehold.co/600x600/0084FD/FFFFFF?text=Wellnee+Patches+Pack",
+          "image": "https://painpatch-relief.vercel.app/images/wellnee-pain-relief-patches.webp",
           "description": "Natural transdermal patches designed to provide targeted relief for knee pain, inflammation, and stiffness for up to 12 hours.",
           "brand": { "@type": "Brand", "name": "Wellnee" },
           "offers": {
@@ -132,11 +135,8 @@
                 </div>
                 <header class="py-3 px-5 md:px-8 bg-white text-center border-b border-gray-100">
                     <div class="flex items-center justify-center cursor-pointer" onclick="window.scrollTo(0,0)">
-                         <!-- Placeholder Logo -->
-                         <div class="flex items-center gap-2">
-                            <i class="fas fa-plus-circle text-3xl text-brand-dark"></i>
-                            <span class="text-2xl font-black text-gray-800 tracking-tighter">Wellnee</span>
-                         </div>
+                         <!-- Logo restored to local path -->
+                         <img src="images/wellnee-logo.webp" alt="Wellnee Logo" class="h-8 md:h-10 w-auto">
                     </div>
                 </header>
             </div>
@@ -145,8 +145,8 @@
             <main class="px-4 pt-6 pb-8 lg:px-12 lg:py-12 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
                 <div class="lg:col-span-5 lg:sticky lg:top-48 text-center lg:text-left">
                     <div class="mb-6 lg:mb-0 relative inline-block w-full rounded-2xl overflow-hidden shadow-lg border border-gray-100">
-                         <!-- Placeholder Product Image -->
-                         <img src="https://placehold.co/600x600/0084FD/FFFFFF?text=Wellnee+Patches+Pack" alt="Wellnee Pain Relief Patches" class="w-full h-auto">
+                         <!-- Product Image restored to local path -->
+                         <img src="images/wellnee-pain-relief-patches.webp" alt="Wellnee Pain Relief Patches" class="w-full h-auto">
                     </div>
                 </div>
                 <div class="lg:col-span-7 flex flex-col">
@@ -215,7 +215,7 @@
             </main>
 
             <!-- SECTION: DECISION OPTIONS (New Addition) -->
-            <section class="px-4 pb-12 lg:px-8 max-w-6xl mx-auto w-full">
+            <section id="offers" class="px-4 pb-12 lg:px-8 max-w-6xl mx-auto w-full scroll-mt-24">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
                     
                     <!-- OPTION 1: RECOMMENDED -->
@@ -297,43 +297,6 @@
                 </div>
             </section>
 
-            <!-- REGION SELECTOR -->
-            <section id="region-selector" class="bg-gray-50 py-12 px-4 sm:px-5 border-t border-gray-200 scroll-mt-36 text-center">
-                <div class="max-w-4xl mx-auto">
-                    <h2 class="text-2xl md:text-3xl font-black text-brand-dark mb-2 tracking-tight" data-i18n="inv_t">Live Inventory Status</h2>
-                    <p class="text-sm text-gray-500 font-medium mb-10">
-                        <span class="w-2 h-2 rounded-full bg-green-500 inline-block animate-pulse"></span> 
-                        <span data-i18n="inv_s">Warehouse verification active. Last update: 2 mins ago.</span>
-                    </p>
-                    
-                    <div class="mb-8">
-                        <h3 class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-6" data-i18n="popular_t">Most Popular Countries</h3>
-                        <div id="popular-flags-container" class="grid grid-cols-2 lg:grid-cols-3 gap-4 mb-6"></div>
-                        
-                        <button id="toggle-countries" onclick="toggleMoreCountries()" class="mt-4 text-brand-dark font-bold text-sm hover:underline flex items-center justify-center gap-2 mx-auto">
-                            <span id="toggle-text" data-i18n="more_countries">Other Countries</span>
-                            <i id="toggle-icon" class="fas fa-chevron-down text-[10px]"></i>
-                        </button>
-                    </div>
-
-                    <div id="other-countries-container" class="hidden animate-fade-in-up mt-8 border-t border-gray-200 pt-8">
-                        <div class="mb-10">
-                            <h4 class="text-xs font-black text-gray-400 uppercase mb-4 tracking-tighter" data-i18n="reg_eu">Europe</h4>
-                            <div id="eu-flags-container" class="grid grid-cols-2 md:grid-cols-4 gap-3"></div>
-                        </div>
-                        <div class="mb-10">
-                            <h4 class="text-xs font-black text-gray-400 uppercase mb-4 tracking-tighter" data-i18n="reg_asia">Middle East & Asia</h4>
-                            <div id="asia-flags-container" class="grid grid-cols-2 md:grid-cols-4 gap-3"></div>
-                        </div>
-                    </div>
-
-                    <div class="max-w-xl mx-auto border-t border-gray-200 pt-8 text-gray-500">
-                        <p class="text-sm font-bold mb-1" data-i18n="ship_support">Shipping available worldwide. Stock and delivery times confirmed at checkout.</p>
-                        <p class="text-xs italic" data-i18n="manual_selection">Manual selection required for local delivery verification.</p>
-                    </div>
-                </div>
-            </section>
-
             <!-- FOOTER -->
             <footer class="bg-white border-t border-gray-100 pt-12 pb-12 px-5 mt-auto text-center">
                 <div class="max-w-5xl mx-auto flex flex-col items-center">
@@ -399,77 +362,13 @@
                 "b0_d": "Join over 200,000 satisfied customers. <strong>Over 70% reordered</strong> after their first purchase, proving real results.",
                 "cta": "Get 70% OFF Today", 
                 "last_units_alert": "⚠️ Warning: Last units available at this price!",
-                "popular_t": "Most Popular Countries",
-                "more_countries": "Other Countries",
-                "reg_eu": "Europe",
-                "reg_asia": "Middle East & Asia",
-                "ship_support": "Shipping available worldwide. Stock and delivery times confirmed at checkout.",
-                "manual_selection": "Manual selection required for local delivery verification.",
                 "n_p": "Privacy Policy", "n_t": "Terms of Service", "n_s": "Shipping", "n_r": "Returns", "n_c": "Contact Us",
                 "disc": "Disclaimer: Wellnee Pain Relief Patches are not medical devices. Results may vary by individual. Always consult your healthcare professional before use. Our 30-day guarantee applies to all official orders."
             }
         };
 
-        const popularCountries = [
-            { name: 'United States', flag: 'us', status: 'In Stock', class: 'stock-high' },
-            { name: 'United Kingdom', flag: 'gb', status: 'LAST UNITS', class: 'stock-critical' },
-            { name: 'Canada', flag: 'ca', status: 'In Stock', class: 'stock-high' },
-            { name: 'Australia', flag: 'au', status: 'In Stock', class: 'stock-high' },
-            { name: 'Germany', flag: 'de', status: 'In Stock', class: 'stock-high' },
-            { name: 'France', flag: 'fr', status: 'LAST UNITS', class: 'stock-critical' }
-        ];
+        // Simplified JS - Removed country/flag related logic
 
-        const europeCountries = [
-            { name: 'Netherlands', flag: 'nl' }, { name: 'Switzerland', flag: 'ch' }, { name: 'Belgium', flag: 'be' },
-            { name: 'Austria', flag: 'at' }, { name: 'Denmark', flag: 'dk' }, { name: 'Sweden', flag: 'se' },
-            { name: 'Norway', flag: 'no' }, { name: 'Finland', flag: 'fi' }, { name: 'Italy', flag: 'it' },
-            { name: 'Spain', flag: 'es' }, { name: 'Portugal', flag: 'pt' }, { name: 'Poland', flag: 'pl' },
-            { name: 'Czech Rep.', flag: 'cz' }, { name: 'Slovakia', flag: 'sk' }, { name: 'Slovenia', flag: 'si' },
-            { name: 'Hungary', flag: 'hu' }, { name: 'Romania', flag: 'ro' }
-        ];
-
-        const asiaMeCountries = [
-            { name: 'Israel', flag: 'il' }, { name: 'Japan', flag: 'jp' }, { name: 'South Korea', flag: 'kr' },
-            { name: 'Singapore', flag: 'sg' }, { name: 'UAE', flag: 'ae' }, { name: 'Qatar', flag: 'qa' },
-            { name: 'Saudi Arabia', flag: 'sa' }
-        ];
-
-        function createFlagCard(country, isCompact = false) {
-            return `
-                <button onclick="checkStock('${country.name}')" class="${isCompact ? 'bg-white p-3 border border-gray-100' : 'bg-white p-6 border border-gray-200 shadow-sm'} rounded-lg hover:shadow-md transition-all flex items-center justify-between text-left group w-full">
-                    <div class="flex items-center gap-4">
-                        <img src="https://flagcdn.com/w160/${country.flag}.png" class="${isCompact ? 'w-10' : 'w-16'} h-auto shadow-sm rounded-sm" alt="${country.name}">
-                        <span class="font-bold text-[10px] md:text-xs uppercase tracking-tight text-gray-700">${country.name}</span>
-                    </div>
-                    ${country.status ? `<span class="stock-indicator ${country.class} hidden md:block">${country.status}</span>` : '<i class="fas fa-chevron-right text-[8px] text-gray-300 group-hover:text-brand-dark"></i>'}
-                </button>
-            `;
-        }
-
-        function renderFlags() {
-            document.getElementById('popular-flags-container').innerHTML = popularCountries.map(c => createFlagCard(c)).join('');
-            document.getElementById('eu-flags-container').innerHTML = europeCountries.map(c => createFlagCard(c, true)).join('');
-            document.getElementById('asia-flags-container').innerHTML = asiaMeCountries.map(c => createFlagCard(c, true)).join('');
-        }
-
-        function toggleMoreCountries() {
-            const container = document.getElementById('other-countries-container');
-            const icon = document.getElementById('toggle-icon');
-            const isHidden = container.classList.contains('hidden');
-            if (isHidden) {
-                container.classList.replace('hidden', 'block');
-                icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
-            } else {
-                container.classList.replace('block', 'hidden');
-                icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
-            }
-        }
-
-        // Updated Function: Redirects to the tracking link
-        function checkStock(countryName) { 
-            window.location.href = 'https://www.clickrtrckr.com/2LXFFTP/3K2QLC6/?uid=5030';
-        }
-        
         function showToast(message) {
             const toast = document.getElementById("toast");
             toast.className = "show";
@@ -477,7 +376,7 @@
             setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
         }
 
-        function scrollToSelector() { document.getElementById('region-selector').scrollIntoView({ behavior: 'smooth' }); }
+        function scrollToSelector() { document.getElementById('offers').scrollIntoView({ behavior: 'smooth' }); }
 
         function initLanguage() {
             const browserLang = navigator.language.split('-')[0];
@@ -500,7 +399,6 @@
         function closeModal() { document.getElementById('info-modal').classList.replace('flex', 'hidden'); }
 
         document.addEventListener('DOMContentLoaded', () => {
-            renderFlags();
             initLanguage();
         });
     </script>
